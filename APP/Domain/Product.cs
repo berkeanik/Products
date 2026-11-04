@@ -23,7 +23,7 @@ namespace APP.Domain
         // products-stores many to many relationship
         public List<ProductStore> ProductStores { get; set; } = new();
 
-        // Not a column in the Products table, used to get and set the store ids of the product.
+        // not mapped to the db, used for getting and setting the store ids
         [NotMapped]
         public List<int> StoreIds
         {

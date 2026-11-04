@@ -7,7 +7,7 @@ namespace CORE.Services
     {
         private string _culture;
 
-        // Sets the culture of the current thread, used for number and date formats.
+        // culture for number and date formats
         protected string Culture
         {
             get

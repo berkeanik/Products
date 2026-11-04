@@ -1,6 +1,6 @@
 namespace CORE.Domain
 {
-    // Base class for all entities and models, every record has an Id.
+    // base class for entities and models
     public abstract class Record
     {
         public int Id { get; set; }

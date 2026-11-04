@@ -2,7 +2,7 @@ using CORE.Domain;
 
 namespace CORE.Models
 {
-    // Returned from the service Add, Update and Remove methods.
+    // result of Add, Update and Remove
     public class CommandResponse : Record
     {
         public bool IsSuccessful { get; }

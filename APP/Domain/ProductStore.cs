@@ -2,7 +2,7 @@ using CORE.Domain;
 
 namespace APP.Domain
 {
-    // Relational entity for the products-stores many to many relationship.
+    // products-stores many to many relationship entity
     public class ProductStore : Record
     {
         public int ProductId { get; set; }

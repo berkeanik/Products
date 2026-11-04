@@ -6,7 +6,7 @@ namespace MVC.Controllers
 {
     public class DbController : Controller
     {
-        // seeds the database with initial data, e.g. https://localhost:7069/SeedDb
+        // go to /SeedDb to reset the data
         [Route("SeedDb")]
         public IActionResult Seed()
         {

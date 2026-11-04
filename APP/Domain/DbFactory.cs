@@ -4,7 +4,7 @@ using System.Globalization;
 
 namespace APP.Domain
 {
-    // Used for scaffolding and seeding the database with initial data.
+    // for scaffolding and seeding the db
     public class DbFactory : IDesignTimeDbContextFactory<Db>
     {
         const string CONNECTIONSTRING = "data source=DB.db";

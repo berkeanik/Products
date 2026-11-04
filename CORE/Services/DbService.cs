@@ -4,7 +4,6 @@ using System.Linq.Expressions;
 
 namespace CORE.Services
 {
-    // Common database operations for the entity services.
     public abstract class DbService<TEntity> : Service, IDisposable where TEntity : Record, new()
     {
         private readonly DbContext _db;
@@ -14,7 +13,7 @@ namespace CORE.Services
             _db = db;
         }
 
-        // Can be overridden in the services to include relational data and to order the query.
+        // override in services for Include and OrderBy
         protected virtual IQueryable<TEntity> DbQuery()
         {
             return _db.Set<TEntity>().AsNoTracking();
@@ -56,7 +55,7 @@ namespace CORE.Services
                 DbSave();
         }
 
-        // Used for removing the relational many to many records.
+        // for deleting many to many records
         protected void DbRemove<TNavigationEntity>(List<TNavigationEntity> navigationEntities) where TNavigationEntity : Record, new()
         {
             _db.Set<TNavigationEntity>().RemoveRange(navigationEntities);

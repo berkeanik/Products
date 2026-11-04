@@ -84,7 +84,7 @@ namespace APP.Services
             var productEntity = DbSingle(request.Id);
             if (productEntity is null)
                 return Error("Product not found!");
-            // delete the old ProductStore records, the new ones are added with StoreIds below
+            // delete old ProductStores, new ones are added with StoreIds
             DbRemove(productEntity.ProductStores);
             productEntity.Name = request.Name.Trim();
             if (request.UnitPrice.HasValue)
